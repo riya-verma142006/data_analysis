@@ -11,7 +11,7 @@ price numeric(10,2),
 stock int
 ) 
 
-create table customers(
+create table customer(
 customer_id serial primary key,
 name varchar(100),
 email varchar(100),
@@ -35,7 +35,7 @@ from 'C:\Users\vriya\Desktop\sql_industry_project\Book.csv'
 csv header;
 
 -- import data into customers table
-copy customers(customer_id,	name,	email,	phone,	city,	country)
+copy customer(customer_id,	name,	email,	phone,	city,	country)
 from 'C:\Users\vriya\Desktop\sql_industry_project\customers.csv'
 csv header;
 
@@ -46,7 +46,7 @@ from 'C:\Users\vriya\Desktop\sql_industry_project\orders.csv'
 csv header;
 
 select * from books;
-select * from customers;
+select * from customer;
 select * from orders;
 
 select title,genre from books 
